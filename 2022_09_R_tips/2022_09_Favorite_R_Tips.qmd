@@ -6,16 +6,18 @@ format:
   revealjs:
     theme: [moon, ../css/rladies.scss]
     show-slide-number: all
+    slide-number: true
     code-copy: true
     code-link: true
     incremental: true
+    transition: slide
     fig-align: center
 execute: 
   eval: false
   echo: true
 ---
 
-## R Studio projects
+# R Studio projects {background-color='#562457'}
 
 ## Project oriented workflow with RStudio
 
@@ -23,10 +25,11 @@ execute:
 
 :::{.column width="58%"}
 
+:::{.nonincremental}
 - One directory with all files relevant for project
   - Scripts, data, plots, documents, ...
 - An RStudio project is just a normal directory with an `*.Rproj` file
-
+:::
 :::
 
 ::: {.column width="38%"}
@@ -50,7 +53,6 @@ Project
 |
 |- *.RProj
 ```
-Example project structure
 
 :::
 
@@ -62,12 +64,12 @@ Example project structure
 
 :::{.column width="58%"}
 
-**Advantages of using RStudio projects**
+**Main advantages of R Studio projects**
 
-- Easy to navigate in R Studio (`File` pane)
-- Easy to find and access scripts in RStudio
+- Easy to navigate project in R Studio (`File` pane)
 - Project root is working directory
 - Open multiple projects simultaneously in separate RStudio instances
+- Portability / Reproducibility
 
 :::
 
@@ -92,11 +94,14 @@ Project
 |
 |- *.RProj
 ```
-Example project structure
 
 :::
 
 :::
+
+. . .
+
+This means **no more `setwd()`!**
 
 
 ## Create an RStudio project
@@ -118,7 +123,7 @@ R Studio will now create and open the project for you.
 
 ### Manage project
 
-![](img/project_manage.png)
+![](img/project_manage.png){width="650"}
 
 :::{.nonincremental}
 - Create folders and files
@@ -129,13 +134,13 @@ R Studio will now create and open the project for you.
 
 ### Navigate Project inside R Studio
 
-![](img/RStudio_Files_navig.png)
+![](img/RStudio_Files_navig.png){width="900"}
 
 ### Open project in R Studio
 
 Click on the project symbol on the top right of R Studio and select the project from the list.
 
-:::{nonincremental}
+:::{.nonincremental}
 - Open in same session
 - Open in new session
 :::
@@ -150,10 +155,14 @@ Just click on the `.Rproj` file in the folder and R Studio opens the project.
 
 :::
 
+# Good coding practice {background-color='#562457'}
+
 ## Good practice coding styling {.scrollable}
 
 Consistent and good practice coding style is important especially if you share 
 your code with other people.
+
+. . .
 
 :::panel-tabset
 
@@ -178,15 +187,16 @@ mean(x = c(1,2,3))
 Limit the width of a line of code and start a new line regularly. 
 A standard is 80 characters.
 
-. . . 
-
+:::{.fragment}
 Instead of this:
 
 ```{r}
 # This is a very bad example of extremely wide code with comments and if you want to read it you really have to scroll to the right
 ggplot(mtcars, aes(hp, mpg, color = am)) + geom_point() +  geom_smooth(formula = y ~ x, method = "loess")
 ```
+:::
 
+:::{.fragment}
 do this:
 
 ```{r}
@@ -196,6 +206,7 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
   geom_point() +  
   geom_smooth(formula = y ~ x, method = "loess")
 ```
+:::
 
 :::
 
@@ -211,18 +222,19 @@ Some R Studio settings help you with keeping the good practice.
 
 :::{.column width="58%"}
 RStudio can let you know in the side bar, if you are missing white space that is recommended. 
-
 :::
+
 :::{.column width="38%"}
 ![](img/info_whitespace.png){width="358"}
 :::
+
 :::
 
-. . .
-
+:::{.fragment}
 `Tools -> Global Options -> Code -> Diagnostics -> Provide R style diagnostics`
 
 ![](img/whitespace_diagn.png){width="379"}
+:::
 
 ### Line width
 
@@ -236,6 +248,8 @@ There is a setting in RStudio that helps you with this. It puts a very thin, ver
 
 Package adds an Addin to R Studio and lets you style your code automatically.^[Find package documentation [here](https://styler.r-lib.org/)]
 
+. . .
+
 **Step 1: Install the package**
 
 ```{r}
@@ -244,25 +258,21 @@ install.packages("styler")
 
 You might have to restart RStudio first.
 
-**Step 2: Use Addins**
+. . .
+
+**Step 2: Use Addin to style your code**
 
 Look for the `Styler` sections of `Addins` (top of R Studio):
 
 ![](img/styler_options.png){width="368"}
 
--   `Style selection`: If you highlighted a piece of code (it always has to be an entire section of code, not just a small part of it) and you click on this, the section will be automatically styled for you.
+-   `Style selection`: highlight code (always an entire section of code, not just a small part) and highlighted section will be automatically styled for you.
 
--   `Style active file`: If you click this, the R file that you have currently open will be styled automatically for you.
+-   `Style active file`: Currently opened R file will be styled automatically.
 
 ## Automatic code styling with [`styler`](https://styler.r-lib.org/) {.scrollable .smaller}
 
 **Step 3: Set keyboard shortcut**
-
-My keyboard shortcuts e.g. look like this:
-
-![](img/styler_shortcut.png){width="463"}
-
-Set your own keyboard shortcuts:
 
 :::{.nonincremental}
 - `Tools -> Modify Keyboard Shortcuts`.
@@ -270,15 +280,28 @@ Set your own keyboard shortcuts:
 - Assign the keyboard shortcut by typing the shortcut
 :::
 
+. . .
+
+My keyboard shortcuts e.g. look like this:
+
+![](img/styler_shortcut.png){width="463"}
+
+# Support your workflow {background-color='#562457'}
+
+`usethis`
+
 ## Workflow with [`usethis`](https://usethis.r-lib.org/)
 
-Great workflow package^[Find package documentation [here](https://usethis.r-lib.org/)] to
+Great workflow package^[Find package documentation [here](https://usethis.r-lib.org/)] for
 
 - Package development: Create and manage files, projects, packages, templates, ...
 - Git and Github: Create and manage github repositories from R Studio
 - Configure R and R Studio
+- ...
 
 . . . 
+
+Get started:
 
 ```{r}
 install.packages("usethis")
@@ -290,11 +313,14 @@ library(usethis)
 
 Some examples that I find useful
 
+. . .
+
 :::panel-tabset
 
 ### Git and Github
 
 ```{r}
+create_github_token() # helps you to setup a github personal access token
 use_git() # initialise git repo
 use_github() # create and connect github repository
 ```
@@ -306,6 +332,7 @@ edit_r_profile() # Manage profile, e.g. packages that are loaded automatically
 ```
 My profile e.g. looks like this:
 
+:::{.fragment}
 ``` r
 if (interactive()) {
   suppressMessages(require(devtools))
@@ -333,6 +360,7 @@ options(
   reprex.style = TRUE
 )
 ```
+:::
 
 ### Package/Project development
 
@@ -342,6 +370,6 @@ create_package() # create an R package
 use_r() # Add an R Script into the /R directory of package/project
 ```
 
-
 :::
 
+# What are your favorite tips and tricks? {background-color='#562457'}
