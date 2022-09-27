@@ -1,0 +1,347 @@
+---
+title: "Our favorite R tips and tricks"
+author: "Selina Baldauf"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: [moon, ../css/rladies.scss]
+    show-slide-number: all
+    code-copy: true
+    code-link: true
+    incremental: true
+    fig-align: center
+execute: 
+  eval: false
+  echo: true
+---
+
+## R Studio projects
+
+## Project oriented workflow with RStudio
+
+::: columns
+
+:::{.column width="58%"}
+
+- One directory with all files relevant for project
+  - Scripts, data, plots, documents, ...
+- An RStudio project is just a normal directory with an `*.Rproj` file
+
+:::
+
+::: {.column width="38%"}
+
+```{}
+Project
+|
+|- data
+|
+|- documents
+|   |
+|   |- notes
+|   |
+|   |- reports
+|
+|- analysis
+|   |
+|   |- clean_data.R 
+|   |
+|   |- statistics.R
+|
+|- *.RProj
+```
+Example project structure
+
+:::
+
+:::
+
+## Project oriented workflow with RStudio
+
+::: columns
+
+:::{.column width="58%"}
+
+**Advantages of using RStudio projects**
+
+- Easy to navigate in R Studio (`File` pane)
+- Easy to find and access scripts in RStudio
+- Project root is working directory
+- Open multiple projects simultaneously in separate RStudio instances
+
+:::
+
+::: {.column width="38%"}
+
+```{}
+Project
+|
+|- data
+|
+|- documents
+|   |
+|   |- notes
+|   |
+|   |- reports
+|
+|- analysis
+|   |
+|   |- clean_data.R 
+|   |
+|   |- statistics.R
+|
+|- *.RProj
+```
+Example project structure
+
+:::
+
+:::
+
+
+## Create an RStudio project
+
+Create a project from scratch:
+
+1. `File -> New Project -> New Directory -> New Project`
+2. Enter a directory name (this will be the name of your project)
+3. Choose the Directory where the project should be saved
+4. `Create Project`
+
+:::{.fragment}
+R Studio will now create and open the project for you.
+:::
+
+## Cool things to do with a project {.smaller .scrollable}
+
+::: panel-tabset
+
+### Manage project
+
+![](img/project_manage.png)
+
+:::{.nonincremental}
+- Create folders and files
+- Rename, Move and delete files
+- Copy files
+- ...
+:::
+
+### Navigate Project inside R Studio
+
+![](img/RStudio_Files_navig.png)
+
+### Open project in R Studio
+
+Click on the project symbol on the top right of R Studio and select the project from the list.
+
+:::{nonincremental}
+- Open in same session
+- Open in new session
+:::
+
+![](img/open_project_rstudio.png)
+
+### Open project outside R Studio
+
+Just click on the `.Rproj` file in the folder and R Studio opens the project.
+
+![](img/open_project.png)
+
+:::
+
+## Good practice coding styling {.scrollable}
+
+Consistent and good practice coding style is important especially if you share 
+your code with other people.
+
+:::panel-tabset
+
+### White space
+
+Use white space around operators, `=`, `<-`, ...
+
+```{r}
+# works but not so nice
+a<-3
+mean(x=c(1,2,3))
+2==2
+
+# better
+a <- 3
+mean(x = c(1,2,3))
+2 == 2
+```
+
+### Line width
+
+Limit the width of a line of code and start a new line regularly. 
+A standard is 80 characters.
+
+. . . 
+
+Instead of this:
+
+```{r}
+# This is a very bad example of extremely wide code with comments and if you want to read it you really have to scroll to the right
+ggplot(mtcars, aes(hp, mpg, color = am)) + geom_point() +  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+do this:
+
+```{r}
+# This is a very bad example of extremely wide code with comments and if you 
+# want to read it you really have to scroll to the right
+ggplot(mtcars, aes(hp, mpg, color = am)) + 
+  geom_point() +  
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+:::
+
+## Good practice coding styling {.smaller .scrollable}
+
+Some R Studio settings help you with keeping the good practice.
+
+:::panel-tabset
+
+### White space
+
+:::columns
+
+:::{.column width="58%"}
+RStudio can let you know in the side bar, if you are missing white space that is recommended. 
+
+:::
+:::{.column width="38%"}
+![](img/info_whitespace.png){width="358"}
+:::
+:::
+
+. . .
+
+`Tools -> Global Options -> Code -> Diagnostics -> Provide R style diagnostics`
+
+![](img/whitespace_diagn.png){width="379"}
+
+### Line width
+
+There is a setting in RStudio that helps you with this. It puts a very thin, vertical line into each of your scripts to show you where you should better start a new line. To turn this on go to `Tools -> Global Options -> Code -> Display`, put a checkmark for `Show margin`
+
+![](img/margins_rstudio.png){width="396"}
+
+:::
+
+## Automatic code styling with [`styler`](https://styler.r-lib.org/) {.scrollable .smaller}
+
+Package adds an Addin to R Studio and lets you style your code automatically.^[Find package documentation [here](https://styler.r-lib.org/)]
+
+**Step 1: Install the package**
+
+```{r}
+install.packages("styler")
+```
+
+You might have to restart RStudio first.
+
+**Step 2: Use Addins**
+
+Look for the `Styler` sections of `Addins` (top of R Studio):
+
+![](img/styler_options.png){width="368"}
+
+-   `Style selection`: If you highlighted a piece of code (it always has to be an entire section of code, not just a small part of it) and you click on this, the section will be automatically styled for you.
+
+-   `Style active file`: If you click this, the R file that you have currently open will be styled automatically for you.
+
+## Automatic code styling with [`styler`](https://styler.r-lib.org/) {.scrollable .smaller}
+
+**Step 3: Set keyboard shortcut**
+
+My keyboard shortcuts e.g. look like this:
+
+![](img/styler_shortcut.png){width="463"}
+
+Set your own keyboard shortcuts:
+
+:::{.nonincremental}
+- `Tools -> Modify Keyboard Shortcuts`.
+- Filter for `style` 
+- Assign the keyboard shortcut by typing the shortcut
+:::
+
+## Workflow with [`usethis`](https://usethis.r-lib.org/)
+
+Great workflow package^[Find package documentation [here](https://usethis.r-lib.org/)] to
+
+- Package development: Create and manage files, projects, packages, templates, ...
+- Git and Github: Create and manage github repositories from R Studio
+- Configure R and R Studio
+
+. . . 
+
+```{r}
+install.packages("usethis")
+library(usethis)
+```
+
+
+## Workflow with [`usethis`](https://usethis.r-lib.org/) {.smaller}
+
+Some examples that I find useful
+
+:::panel-tabset
+
+### Git and Github
+
+```{r}
+use_git() # initialise git repo
+use_github() # create and connect github repository
+```
+
+### Manage R Studio configuration
+
+```{r}
+edit_r_profile() # Manage profile, e.g. packages that are loaded automatically
+```
+My profile e.g. looks like this:
+
+``` r
+if (interactive()) {
+  suppressMessages(require(devtools))
+  suppressMessages(require(usethis))
+  suppressMessages(require(reprex))
+}
+
+options(
+  ## RCompendium Credentials ----
+  given = "Selina", 
+  family = "Baldauf", 
+  email = "selina.baldauf@fu-berlin.de",
+  usethis.full_name = "Selina Baldauf",
+  usethis.protocol = "ssh",
+  usethis.description = list(
+    "Authors@R" = utils::person(
+      "Selina", "Baldauf",
+      email = "selina.baldauf@fu-berlin.de",
+      role = c("aut", "cre")
+    ),
+    Version = "0.0.0.9000"
+  ),
+  reprex.show = FALSE,
+  reprex.advertise = FALSE,
+  reprex.style = TRUE
+)
+```
+
+### Package/Project development
+
+```{r}
+create_project() # create an R Studio project
+create_package() # create an R package
+use_r() # Add an R Script into the /R directory of package/project
+```
+
+
+:::
+
