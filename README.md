@@ -3,6 +3,7 @@
 A collection of short presentation that can be reused or extended by others
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/selinaZitrone/Short_Presentations/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/selinaZitrone/Short_Presentations/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Please keep the following guidelines when working with the repo:

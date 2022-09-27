@@ -4,3 +4,7 @@
 .Ruserdata
 
 *.html
+**/*_files/
+/.quarto/
+_site/
+docs/

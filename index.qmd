@@ -1,0 +1,13 @@
+Below, you can find a collection of presentation from various topics.
+
+Select and click on the link
+
+## All about R:
+
+### [Our favorite R tips and tricks](2022_09_R_tips/2022_09_Favorite_R_Tips.qmd)
+
+Some nice tips and trick around R and R Studio that make your life a bit easier when coding. Includes:
+
+- R Studio projects
+- Code styling with `styler`
+- Workflow with `usethis`

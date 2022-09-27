@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Short presentations"
+  description: "A collection of short presentations"
+  repo-url: https://github.com/selinaZitrone/Short_Presentations
+  navbar:
+    background: "#562457"
+    pinned: true
+    right:
+      - icon: github
+        href: https://github.com/selinaZitrone/Short_Presentations
+format:
+  html:
+    theme: cosmo
+    toc: true
+    
+execute: 
+  freeze: auto
