@@ -1,16 +1,17 @@
 # Short_Presentations
 
-A collection of short presentation that can be reused or extended by others
+A collection of short presentation that can be reused or extended by others.
+Find a website with all presentations [here](https://selinazitrone.github.io/Short_Presentations/)
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/selinaZitrone/Short_Presentations/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/selinaZitrone/Short_Presentations/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Please keep the following guidelines when working with the repo:
 
 - Create a new sub-folder for every presentation
-- Naming convention for folder and presenation: YYYY_MM_topic_short
+- Naming convention for folder and presentation: YYYY_MM_topic_short
 
-In `Quarto_demo` you can find a demo presentation that shows different quarto 
-features you can use in your presentations. But of course you don't have to use quarto
-if you don't want to.
+Everytime you push to the main branch, the website is re-rendered. Have a look at
+`index.qmd` to see how you can link your own presentation on the website.
+
+
