@@ -286,6 +286,20 @@ My keyboard shortcuts e.g. look like this:
 
 ![](img/styler_shortcut.png){width="463"}
 
+## Divide your code into sections
+
+Insert section headers into your code using the keyboard shortcut `Ctrl/Cmd + Shift + R`
+
+:::{.nonincremental}
+- Structure your document with sections
+- Look at document outline and jump to sections
+- Collapse sections of code
+:::
+
+![](img/code_sections.png)
+
+
+
 # Support your workflow {background-color='#562457'}
 
 `usethis`
