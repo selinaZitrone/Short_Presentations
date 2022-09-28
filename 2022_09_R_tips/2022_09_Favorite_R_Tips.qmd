@@ -386,4 +386,31 @@ use_r() # Add an R Script into the /R directory of package/project
 
 :::
 
+# R Studio Global options {background-color='#562457'}
+
+There are a lot of useful option in R Studio. It makes sense to look through all of them to see what is available.
+
+Find some ideas and remarks on the next slides.
+
+Find global options via `Tools -> Global Options`
+
+
+## Code diagnostics
+
+Turn on some code diagnostic options so R Studio warns you in the side bar if there is a problem with your code.
+
+`Code -> Diagnostics`
+
+Here is my setup as an example:
+
+![](img/code_diagnostics.png)
+
+## Code Display
+
+- Get rainbow parentheses `Code -> Display -> Rainbow Parentheses`
+- Makes it easier to find matching parentheses, e.g.
+
+. . .
+
+![](img/rainbow_parentheses.png)
 # What are your favorite tips and tricks? {background-color='#562457'}
