@@ -89,5 +89,19 @@
     "title": "Our favorite R tips and tricks",
     "section": "Workflow with usethis",
     "text": "Workflow with usethis\nSome examples that I find useful\n\n\nGit and GithubManage R Studio configurationPackage/Project development\n\n\n\ncreate_github_token() # helps you to setup a github personal access token\nuse_git() # initialise git repo\nuse_github() # create and connect github repository\n\n\n\n\nedit_r_profile() # Manage profile, e.g. packages that are loaded automatically\n\nMy profile e.g. looks like this:\n\nif (interactive()) {\n  suppressMessages(require(devtools))\n  suppressMessages(require(usethis))\n  suppressMessages(require(reprex))\n}\n\noptions(\n  ## RCompendium Credentials ----\n  given = \"Selina\", \n  family = \"Baldauf\", \n  email = \"selina.baldauf@fu-berlin.de\",\n  usethis.full_name = \"Selina Baldauf\",\n  usethis.protocol = \"ssh\",\n  usethis.description = list(\n    \"Authors@R\" = utils::person(\n      \"Selina\", \"Baldauf\",\n      email = \"selina.baldauf@fu-berlin.de\",\n      role = c(\"aut\", \"cre\")\n    ),\n    Version = \"0.0.0.9000\"\n  ),\n  reprex.show = FALSE,\n  reprex.advertise = FALSE,\n  reprex.style = TRUE\n)\n\n\n\n\ncreate_project() # create an R Studio project\ncreate_package() # create an R package\nuse_r() # Add an R Script into the /R directory of package/project"
+  },
+  {
+    "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#code-diagnostics",
+    "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#code-diagnostics",
+    "title": "Our favorite R tips and tricks",
+    "section": "Code diagnostics",
+    "text": "Code diagnostics\nTurn on some code diagnostic options so R Studio warns you in the side bar if there is a problem with your code.\nCode -> Diagnostics\nHere is my setup as an example:"
+  },
+  {
+    "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#code-display",
+    "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#code-display",
+    "title": "Our favorite R tips and tricks",
+    "section": "Code Display",
+    "text": "Code Display\n\nGet rainbow parentheses Code -> Display -> Rainbow Parentheses\nMakes it easier to find matching parentheses, e.g.\n\n\n # What are your favorite tips and tricks? {background-color=‘#562457’}"
   }
 ]
