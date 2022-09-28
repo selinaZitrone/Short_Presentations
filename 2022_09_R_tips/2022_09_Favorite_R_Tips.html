@@ -6,17 +6,18 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-99.9.9">
-<meta name="author" content="Selina Baldauf">
-<title>Short presentations - Our favorite R tips and tricks</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.1.251">
+
+  <meta name="author" content="Selina Baldauf">
+  <meta name="dcterms.date" content="2022-09-28">
+  <title>Short presentations - Our favorite R tips and tricks</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -93,12 +94,12 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -295,7 +296,7 @@
   }
 
   </style>
-<style type="text/css">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -387,20 +388,19 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Our favorite R tips and tricks</h1>
+<section id="title-slide" class="center">
+  <h1 class="title">Our favorite R tips and tricks</h1>
+  <p class="author">Selina Baldauf</p>
+  <p class="date">2022-09-28</p>
+</section>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Selina Baldauf 
-</div>
-</div>
-</div>
+<section>
+<section id="r-studio-projects" class="title-slide slide level1 center" data-background-color="#562457">
+<h1>R Studio projects</h1>
 
-  <p class="date">9/27/22</p>
-</section><section><section id="r-studio-projects" class="title-slide slide level1 center" data-background-color="#562457"><h1>R Studio projects</h1>
-
-</section><section id="project-oriented-workflow-with-rstudio" class="slide level2"><h2>Project oriented workflow with RStudio</h2>
+</section>
+<section id="project-oriented-workflow-with-rstudio" class="slide level2">
+<h2>Project oriented workflow with RStudio</h2>
 <div class="columns">
 <div class="column" style="width:58%;">
 <div>
@@ -408,8 +408,7 @@ Selina Baldauf
 <li>One directory with all files relevant for project
 <ul>
 <li>Scripts, data, plots, documents, …</li>
-</ul>
-</li>
+</ul></li>
 <li>An RStudio project is just a normal directory with an <code>*.Rproj</code> file</li>
 </ul>
 </div>
@@ -433,7 +432,9 @@ Selina Baldauf
 |- *.RProj</code></pre>
 </div>
 </div>
-</section><section id="project-oriented-workflow-with-rstudio-1" class="slide level2"><h2>Project oriented workflow with RStudio</h2>
+</section>
+<section id="project-oriented-workflow-with-rstudio-1" class="slide level2">
+<h2>Project oriented workflow with RStudio</h2>
 <div class="columns">
 <div class="column" style="width:58%;">
 <p><strong>Main advantages of R Studio projects</strong></p>
@@ -464,9 +465,11 @@ Selina Baldauf
 </div>
 </div>
 <div class="fragment">
-<p>This means <strong>no more <code><a href="https://rdrr.io/r/base/getwd.html">setwd()</a></code>!</strong></p>
+<p>This means <strong>no more <code>setwd()</code>!</strong></p>
 </div>
-</section><section id="create-an-rstudio-project" class="slide level2"><h2>Create an RStudio project</h2>
+</section>
+<section id="create-an-rstudio-project" class="slide level2">
+<h2>Create an RStudio project</h2>
 <p>Create a project from scratch:</p>
 <ol type="1">
 <li class="fragment"><code>File -&gt; New Project -&gt; New Directory -&gt; New Project</code></li>
@@ -477,14 +480,11 @@ Selina Baldauf
 <div class="fragment">
 <p>R Studio will now create and open the project for you.</p>
 </div>
-</section><section id="cool-things-to-do-with-a-project" class="slide level2 smaller scrollable"><h2>Cool things to do with a project</h2>
+</section>
+<section id="cool-things-to-do-with-a-project" class="slide level2 smaller scrollable">
+<h2>Cool things to do with a project</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">Manage project</a></li>
-<li><a href="#tabset-1-2">Navigate Project inside R Studio</a></li>
-<li><a href="#tabset-1-3">Open project in R Studio</a></li>
-<li><a href="#tabset-1-4">Open project outside R Studio</a></li>
-</ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Manage project</a></li><li><a href="#tabset-1-2">Navigate Project inside R Studio</a></li><li><a href="#tabset-1-3">Open project in R Studio</a></li><li><a href="#tabset-1-4">Open project outside R Studio</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <p><img data-src="img/project_manage.png" width="650"></p>
@@ -516,16 +516,18 @@ Selina Baldauf
 </div>
 </div>
 </div>
-</section></section><section><section id="good-coding-practice" class="title-slide slide level1 center" data-background-color="#562457"><h1>Good coding practice</h1>
+</section></section>
+<section>
+<section id="good-coding-practice" class="title-slide slide level1 center" data-background-color="#562457">
+<h1>Good coding practice</h1>
 
-</section><section id="good-practice-coding-styling" class="slide level2 scrollable"><h2>Good practice coding styling</h2>
+</section>
+<section id="good-practice-coding-styling" class="slide level2 scrollable">
+<h2>Good practice coding styling</h2>
 <p>Consistent and good practice coding style is important especially if you share your code with other people.</p>
 <div class="fragment">
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">White space</a></li>
-<li><a href="#tabset-2-2">Line width</a></li>
-</ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">White space</a></li><li><a href="#tabset-2-2">Line width</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <p>Use white space around operators, <code>=</code>, <code>&lt;-</code>, …</p>
@@ -564,13 +566,12 @@ Selina Baldauf
 </div>
 </div>
 </div>
-</section><section id="good-practice-coding-styling-1" class="slide level2 smaller scrollable"><h2>Good practice coding styling</h2>
+</section>
+<section id="good-practice-coding-styling-1" class="slide level2 smaller scrollable">
+<h2>Good practice coding styling</h2>
 <p>Some R Studio settings help you with keeping the good practice.</p>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">White space</a></li>
-<li><a href="#tabset-3-2">Line width</a></li>
-</ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">White space</a></li><li><a href="#tabset-3-2">Line width</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="columns">
@@ -591,8 +592,9 @@ Selina Baldauf
 </div>
 </div>
 </div>
-</section><section id="automatic-code-styling-with-styler" class="slide level2 scrollable smaller"><h2>Automatic code styling with <a href="https://styler.r-lib.org/"><code>styler</code></a>
-</h2>
+</section>
+<section id="automatic-code-styling-with-styler" class="slide level2 scrollable smaller">
+<h2>Automatic code styling with <a href="https://styler.r-lib.org/"><code>styler</code></a></h2>
 <p>Package adds an Addin to R Studio and lets you style your code automatically.<sup>1</sup></p>
 <div class="fragment">
 <p><strong>Step 1: Install the package</strong></p>
@@ -610,15 +612,14 @@ Selina Baldauf
 <li class="fragment"><p><code>Style active file</code>: Currently opened R file will be styled automatically.</p></li>
 </ul>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Find package documentation <a href="https://styler.r-lib.org/">here</a></p></li></ol></aside></section><section id="automatic-code-styling-with-styler-1" class="slide level2 scrollable smaller"><h2>Automatic code styling with <a href="https://styler.r-lib.org/"><code>styler</code></a>
-</h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Find package documentation <a href="https://styler.r-lib.org/">here</a></p></li></ol></aside></section>
+<section id="automatic-code-styling-with-styler-1" class="slide level2 scrollable smaller">
+<h2>Automatic code styling with <a href="https://styler.r-lib.org/"><code>styler</code></a></h2>
 <p><strong>Step 3: Set keyboard shortcut</strong></p>
 <div>
 <ul>
-<li>
-<code>Tools -&gt; Modify Keyboard Shortcuts</code>.</li>
-<li>Filter for <code>style</code>
-</li>
+<li><code>Tools -&gt; Modify Keyboard Shortcuts</code>.</li>
+<li>Filter for <code>style</code></li>
 <li>Assign the keyboard shortcut by typing the shortcut</li>
 </ul>
 </div>
@@ -626,10 +627,26 @@ Selina Baldauf
 <p>My keyboard shortcuts e.g.&nbsp;look like this:</p>
 <p><img data-src="img/styler_shortcut.png" width="463"></p>
 </div>
-</section></section><section><section id="support-your-workflow" class="title-slide slide level1 center" data-background-color="#562457"><h1>Support your workflow</h1>
+</section>
+<section id="divide-your-code-into-sections" class="slide level2">
+<h2>Divide your code into sections</h2>
+<p>Insert section headers into your code using the keyboard shortcut <code>Ctrl/Cmd + Shift + R</code></p>
+<div>
+<ul>
+<li>Structure your document with sections</li>
+<li>Look at document outline and jump to sections</li>
+<li>Collapse sections of code</li>
+</ul>
+</div>
+
+<img data-src="img/code_sections.png" class="r-stretch"></section></section>
+<section>
+<section id="support-your-workflow" class="title-slide slide level1 center" data-background-color="#562457">
+<h1>Support your workflow</h1>
 <p><code>usethis</code></p>
-</section><section id="workflow-with-usethis" class="slide level2"><h2>Workflow with <a href="https://usethis.r-lib.org/"><code>usethis</code></a>
-</h2>
+</section>
+<section id="workflow-with-usethis" class="slide level2">
+<h2>Workflow with <a href="https://usethis.r-lib.org/"><code>usethis</code></a></h2>
 <p>Great workflow package<sup>1</sup> for</p>
 <ul>
 <li class="fragment">Package development: Create and manage files, projects, packages, templates, …</li>
@@ -644,16 +661,13 @@ Selina Baldauf
 <span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(usethis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>Find package documentation <a href="https://usethis.r-lib.org/">here</a></p></li></ol></aside></section><section id="workflow-with-usethis-1" class="slide level2 smaller"><h2>Workflow with <a href="https://usethis.r-lib.org/"><code>usethis</code></a>
-</h2>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Find package documentation <a href="https://usethis.r-lib.org/">here</a></p></li></ol></aside></section>
+<section id="workflow-with-usethis-1" class="slide level2 smaller">
+<h2>Workflow with <a href="https://usethis.r-lib.org/"><code>usethis</code></a></h2>
 <p>Some examples that I find useful</p>
 <div class="fragment">
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">Git and Github</a></li>
-<li><a href="#tabset-4-2">Manage R Studio configuration</a></li>
-<li><a href="#tabset-4-3">Package/Project development</a></li>
-</ul>
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Git and Github</a></li><li><a href="#tabset-4-2">Manage R Studio configuration</a></li><li><a href="#tabset-4-3">Package/Project development</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
 <div class="cell">
@@ -705,16 +719,36 @@ Selina Baldauf
 </div>
 </div>
 </div>
-</section></section><section id="what-are-your-favorite-tips-and-tricks" class="title-slide slide level1 center" data-background-color="#562457"><h1>What are your favorite tips and tricks?</h1>
+</section></section>
+<section id="what-are-your-favorite-tips-and-tricks" class="title-slide slide level1 center" data-background-color="#562457">
+<h1>What are your favorite tips and tricks?</h1>
 
 <div class="footer footer-default">
 
 </div>
 </section>
-</div>
+
+
+    </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -905,18 +939,20 @@ Selina Baldauf
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+    <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
         function fireSlideChanged(previousSlide, currentSlide) {
-
+    
           // dispatch for htmlwidgets
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
-
+    
           // dispatch for shiny
           if (window.jQuery) {
             if (previousSlide) {
@@ -927,14 +963,14 @@ Selina Baldauf
             }
           }
         }
-
+    
         // hookup for reveal
         if (window.Reveal) {
           window.Reveal.addEventListener("slidechanged", function(event) {
             fireSlideChanged(event.previousSlide, event.currentSlide);
           });
         }
-
+    
         // hookup for slidy
         if (window.w3c_slidy) {
           window.w3c_slidy.add_observer(function (slide_num) {
@@ -942,9 +978,11 @@ Selina Baldauf
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
           });
         }
-
+    
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+    
+    <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -982,24 +1020,7 @@ Selina Baldauf
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
         setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -1037,45 +1058,27 @@ Selina Baldauf
           return note.innerHTML;
         });
       }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
           });
-        }
+          return popup.innerHTML;
+        });
       }
     });
     </script>
-
+    
 
 </body></html>

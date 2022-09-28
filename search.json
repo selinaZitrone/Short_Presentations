@@ -1,10 +1,24 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Short presentations",
+    "section": "",
+    "text": "Below, you can find a collection of presentation from various topics.\nSelect and click on the link"
+  },
+  {
+    "objectID": "index.html#all-about-r",
+    "href": "index.html#all-about-r",
+    "title": "Short presentations",
+    "section": "All about R:",
+    "text": "All about R:\n\nOur favorite R tips and tricks\nSome nice tips and trick around R and R Studio that make your life a bit easier when coding. Includes:\n\nR Studio projects\nCode styling with styler\nWorkflow with usethis"
+  },
+  {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#project-oriented-workflow-with-rstudio",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#project-oriented-workflow-with-rstudio",
     "title": "Our favorite R tips and tricks",
     "section": "Project oriented workflow with RStudio",
-    "text": "Project oriented workflow with RStudio\n\n\n\n\nOne directory with all files relevant for project\n\nScripts, data, plots, documents, …\n\n\nAn RStudio project is just a normal directory with an *.Rproj file\n\n\n\nProject\n|\n|- data\n|\n|- documents\n|   |\n|   |- notes\n|   |\n|   |- reports\n|\n|- analysis\n|   |\n|   |- clean_data.R \n|   |\n|   |- statistics.R\n|\n|- *.RProj"
+    "text": "Project oriented workflow with RStudio\n\n\n\n\nOne directory with all files relevant for project\n\nScripts, data, plots, documents, …\n\nAn RStudio project is just a normal directory with an *.Rproj file\n\n\n\nProject\n|\n|- data\n|\n|- documents\n|   |\n|   |- notes\n|   |\n|   |- reports\n|\n|- analysis\n|   |\n|   |- clean_data.R \n|   |\n|   |- statistics.R\n|\n|- *.RProj"
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#project-oriented-workflow-with-rstudio-1",
@@ -25,62 +39,55 @@
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#cool-things-to-do-with-a-project",
     "title": "Our favorite R tips and tricks",
     "section": "Cool things to do with a project",
-    "text": "Cool things to do with a project\n\n\nManage project\nNavigate Project inside R Studio\nOpen project in R Studio\nOpen project outside R Studio\n\n\n\n\n\n\nCreate folders and files\nRename, Move and delete files\nCopy files\n…\n\n\n\n\n\n\n\nClick on the project symbol on the top right of R Studio and select the project from the list.\n\n\nOpen in same session\nOpen in new session\n\n\n\n\n\nJust click on the .Rproj file in the folder and R Studio opens the project."
+    "text": "Cool things to do with a project\n\nManage projectNavigate Project inside R StudioOpen project in R StudioOpen project outside R Studio\n\n\n\n\n\nCreate folders and files\nRename, Move and delete files\nCopy files\n…\n\n\n\n\n\n\n\nClick on the project symbol on the top right of R Studio and select the project from the list.\n\n\nOpen in same session\nOpen in new session\n\n\n\n\n\nJust click on the .Rproj file in the folder and R Studio opens the project."
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#good-practice-coding-styling",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#good-practice-coding-styling",
     "title": "Our favorite R tips and tricks",
     "section": "Good practice coding styling",
-    "text": "Good practice coding styling\nConsistent and good practice coding style is important especially if you share your code with other people.\n\n\n\nWhite space\nLine width\n\n\n\nUse white space around operators, =, <-, …\n\n# works but not so nice\na<-3\nmean(x=c(1,2,3))\n2==2\n\n# better\na <- 3\nmean(x = c(1,2,3))\n2 == 2\n\n\n\nLimit the width of a line of code and start a new line regularly. A standard is 80 characters.\n\nInstead of this:\n\n# This is a very bad example of extremely wide code with comments and if you want to read it you really have to scroll to the right\nggplot(mtcars, aes(hp, mpg, color = am)) + geom_point() +  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\ndo this:\n\n# This is a very bad example of extremely wide code with comments and if you \n# want to read it you really have to scroll to the right\nggplot(mtcars, aes(hp, mpg, color = am)) + \n  geom_point() +  \n  geom_smooth(formula = y ~ x, method = \"loess\")"
+    "text": "Good practice coding styling\nConsistent and good practice coding style is important especially if you share your code with other people.\n\n\nWhite spaceLine width\n\n\nUse white space around operators, =, <-, …\n\n# works but not so nice\na<-3\nmean(x=c(1,2,3))\n2==2\n\n# better\na <- 3\nmean(x = c(1,2,3))\n2 == 2\n\n\n\nLimit the width of a line of code and start a new line regularly. A standard is 80 characters.\n\nInstead of this:\n\n# This is a very bad example of extremely wide code with comments and if you want to read it you really have to scroll to the right\nggplot(mtcars, aes(hp, mpg, color = am)) + geom_point() +  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\ndo this:\n\n# This is a very bad example of extremely wide code with comments and if you \n# want to read it you really have to scroll to the right\nggplot(mtcars, aes(hp, mpg, color = am)) + \n  geom_point() +  \n  geom_smooth(formula = y ~ x, method = \"loess\")"
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#good-practice-coding-styling-1",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#good-practice-coding-styling-1",
     "title": "Our favorite R tips and tricks",
     "section": "Good practice coding styling",
-    "text": "Good practice coding styling\nSome R Studio settings help you with keeping the good practice.\n\n\nWhite space\nLine width\n\n\n\n\n\nRStudio can let you know in the side bar, if you are missing white space that is recommended.\n\n\n\n\n\nTools -> Global Options -> Code -> Diagnostics -> Provide R style diagnostics\n\n\n\n\nThere is a setting in RStudio that helps you with this. It puts a very thin, vertical line into each of your scripts to show you where you should better start a new line. To turn this on go to Tools -> Global Options -> Code -> Display, put a checkmark for Show margin"
+    "text": "Good practice coding styling\nSome R Studio settings help you with keeping the good practice.\n\nWhite spaceLine width\n\n\n\n\nRStudio can let you know in the side bar, if you are missing white space that is recommended.\n\n\n\n\n\nTools -> Global Options -> Code -> Diagnostics -> Provide R style diagnostics\n\n\n\n\nThere is a setting in RStudio that helps you with this. It puts a very thin, vertical line into each of your scripts to show you where you should better start a new line. To turn this on go to Tools -> Global Options -> Code -> Display, put a checkmark for Show margin"
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#automatic-code-styling-with-styler",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#automatic-code-styling-with-styler",
     "title": "Our favorite R tips and tricks",
-    "section": "Automatic code styling with styler\n",
-    "text": "Automatic code styling with styler\n\nPackage adds an Addin to R Studio and lets you style your code automatically.1\n\nStep 1: Install the package\n\ninstall.packages(\"styler\")\n\nYou might have to restart RStudio first.\n\n\nStep 2: Use Addin to style your code\nLook for the Styler sections of Addins (top of R Studio):\n\n\nStyle selection: highlight code (always an entire section of code, not just a small part) and highlighted section will be automatically styled for you.\nStyle active file: Currently opened R file will be styled automatically.\n\n\nFind package documentation here"
+    "section": "Automatic code styling with styler",
+    "text": "Automatic code styling with styler\nPackage adds an Addin to R Studio and lets you style your code automatically.1\n\nStep 1: Install the package\n\ninstall.packages(\"styler\")\n\nYou might have to restart RStudio first.\n\n\nStep 2: Use Addin to style your code\nLook for the Styler sections of Addins (top of R Studio):\n\n\nStyle selection: highlight code (always an entire section of code, not just a small part) and highlighted section will be automatically styled for you.\nStyle active file: Currently opened R file will be styled automatically.\n\n\nFind package documentation here"
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#automatic-code-styling-with-styler-1",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#automatic-code-styling-with-styler-1",
     "title": "Our favorite R tips and tricks",
-    "section": "Automatic code styling with styler\n",
-    "text": "Automatic code styling with styler\n\nStep 3: Set keyboard shortcut\n\n\n\nTools -> Modify Keyboard Shortcuts.\nFilter for style\n\nAssign the keyboard shortcut by typing the shortcut\n\n\n\nMy keyboard shortcuts e.g. look like this:"
+    "section": "Automatic code styling with styler",
+    "text": "Automatic code styling with styler\nStep 3: Set keyboard shortcut\n\n\nTools -> Modify Keyboard Shortcuts.\nFilter for style\nAssign the keyboard shortcut by typing the shortcut\n\n\n\nMy keyboard shortcuts e.g. look like this:"
+  },
+  {
+    "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#divide-your-code-into-sections",
+    "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#divide-your-code-into-sections",
+    "title": "Our favorite R tips and tricks",
+    "section": "Divide your code into sections",
+    "text": "Divide your code into sections\nInsert section headers into your code using the keyboard shortcut Ctrl/Cmd + Shift + R\n\n\nStructure your document with sections\nLook at document outline and jump to sections\nCollapse sections of code"
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#workflow-with-usethis",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#workflow-with-usethis",
     "title": "Our favorite R tips and tricks",
-    "section": "Workflow with usethis\n",
-    "text": "Workflow with usethis\n\nGreat workflow package1 for\n\nPackage development: Create and manage files, projects, packages, templates, …\nGit and Github: Create and manage github repositories from R Studio\nConfigure R and R Studio\n…\n\n\nGet started:\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n\n\nFind package documentation here"
+    "section": "Workflow with usethis",
+    "text": "Workflow with usethis\nGreat workflow package1 for\n\nPackage development: Create and manage files, projects, packages, templates, …\nGit and Github: Create and manage github repositories from R Studio\nConfigure R and R Studio\n…\n\n\nGet started:\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n\n\nFind package documentation here"
   },
   {
     "objectID": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#workflow-with-usethis-1",
     "href": "2022_09_R_tips/2022_09_Favorite_R_Tips.html#workflow-with-usethis-1",
     "title": "Our favorite R tips and tricks",
-    "section": "Workflow with usethis\n",
-    "text": "Workflow with usethis\n\nSome examples that I find useful\n\n\n\nGit and Github\nManage R Studio configuration\nPackage/Project development\n\n\n\n\ncreate_github_token() # helps you to setup a github personal access token\nuse_git() # initialise git repo\nuse_github() # create and connect github repository\n\n\n\n\nedit_r_profile() # Manage profile, e.g. packages that are loaded automatically\n\nMy profile e.g. looks like this:\n\nif (interactive()) {\n  suppressMessages(require(devtools))\n  suppressMessages(require(usethis))\n  suppressMessages(require(reprex))\n}\n\noptions(\n  ## RCompendium Credentials ----\n  given = \"Selina\", \n  family = \"Baldauf\", \n  email = \"selina.baldauf@fu-berlin.de\",\n  usethis.full_name = \"Selina Baldauf\",\n  usethis.protocol = \"ssh\",\n  usethis.description = list(\n    \"Authors@R\" = utils::person(\n      \"Selina\", \"Baldauf\",\n      email = \"selina.baldauf@fu-berlin.de\",\n      role = c(\"aut\", \"cre\")\n    ),\n    Version = \"0.0.0.9000\"\n  ),\n  reprex.show = FALSE,\n  reprex.advertise = FALSE,\n  reprex.style = TRUE\n)\n\n\n\n\ncreate_project() # create an R Studio project\ncreate_package() # create an R package\nuse_r() # Add an R Script into the /R directory of package/project"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Short presentations",
-    "section": "",
-    "text": "Below, you can find a collection of presentation from various topics.\nSelect and click on the link"
-  },
-  {
-    "objectID": "index.html#all-about-r",
-    "href": "index.html#all-about-r",
-    "title": "Short presentations",
-    "section": "All about R:",
-    "text": "All about R:\n\nOur favorite R tips and tricks\nSome nice tips and trick around R and R Studio that make your life a bit easier when coding. Includes:\n\nR Studio projects\nCode styling with styler\nWorkflow with usethis"
+    "section": "Workflow with usethis",
+    "text": "Workflow with usethis\nSome examples that I find useful\n\n\nGit and GithubManage R Studio configurationPackage/Project development\n\n\n\ncreate_github_token() # helps you to setup a github personal access token\nuse_git() # initialise git repo\nuse_github() # create and connect github repository\n\n\n\n\nedit_r_profile() # Manage profile, e.g. packages that are loaded automatically\n\nMy profile e.g. looks like this:\n\nif (interactive()) {\n  suppressMessages(require(devtools))\n  suppressMessages(require(usethis))\n  suppressMessages(require(reprex))\n}\n\noptions(\n  ## RCompendium Credentials ----\n  given = \"Selina\", \n  family = \"Baldauf\", \n  email = \"selina.baldauf@fu-berlin.de\",\n  usethis.full_name = \"Selina Baldauf\",\n  usethis.protocol = \"ssh\",\n  usethis.description = list(\n    \"Authors@R\" = utils::person(\n      \"Selina\", \"Baldauf\",\n      email = \"selina.baldauf@fu-berlin.de\",\n      role = c(\"aut\", \"cre\")\n    ),\n    Version = \"0.0.0.9000\"\n  ),\n  reprex.show = FALSE,\n  reprex.advertise = FALSE,\n  reprex.style = TRUE\n)\n\n\n\n\ncreate_project() # create an R Studio project\ncreate_package() # create an R package\nuse_r() # Add an R Script into the /R directory of package/project"
   }
 ]
